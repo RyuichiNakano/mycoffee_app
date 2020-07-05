@@ -30,4 +30,19 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 ja:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %(errors)"
+        restrict_dependent_destroy:
+          has_one: "%(record)が存在しているので削除できません"
+          has_many: "%(record)が存在しているので削除できません"
+    models:
+      record: タスク
+    attributes:
+      record:
+      id: ID
+      name: コーヒーの名前
+      description: 詳しい説明
+      created_at: 登録日時
+      updated_at: 更新日時
