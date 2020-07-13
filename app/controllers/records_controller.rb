@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
   def index
+    @records = Record.all
   end
 
   def show
@@ -13,7 +14,8 @@ class RecordsController < ApplicationController
     record = Record.new(record_params)
     record.save
     redirect_to records_url, notice: "コーヒー「#(record.name)」を登録いたしました。"
-  def edit
+  
+    def edit
   end
 end
 
